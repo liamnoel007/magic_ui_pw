@@ -16,6 +16,11 @@ pipeline {
                 sh 'docker run --rm -v $(pwd)/allure-results:/app/allure-results magic-ui-pw-tests'
             }
         }
+        stage('Fix Permissions') {
+            steps {
+                sh 'sudo chown -R jenkins:jenkins allure-results'
+            }
+        }
         stage('Allure Report') {
             steps {
                 allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
