@@ -1,8 +1,8 @@
 import allure
 
 
-@allure.feature("Авторизаци")
-@allure.story("Авторизации недействительные учетные данные")
+@allure.feature("Авторизация")
+@allure.story("Авторизация недействительные учетные данные")
 @allure.title("Тест формы ввода. Логин и пароль неверные")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_incorrect_login_and_password(login_page):
