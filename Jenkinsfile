@@ -28,7 +28,7 @@ pipeline {
 
                     # Запускаем контейнер от имени Jenkins
                     docker run --rm \
-                      -u $(id -u jenkins):$(id -g jenkins) \
+                      -u \$(id -u jenkins):\$(id -g jenkins) \
                       -v ${WORKSPACE}/allure-results:/app/allure-results \
                       ${IMAGE_NAME}
                 """
