@@ -1,7 +1,7 @@
-FROM mcr.microsoft.com/playwright:v1.40.0-jammy
+FROM mcr.microsoft.com/playwright:v1.55.0-jammy
 
-# Устанавливаем Python и pip
-RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
+# Устанавливаем Python, pip и git
+RUN apt-get update && apt-get install -y python3 python3-pip python3-venv git
 
 WORKDIR /app
 
