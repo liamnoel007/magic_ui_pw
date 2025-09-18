@@ -13,12 +13,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                sh 'docker run --rm -v $(pwd)/allure-results:/app/allure-results magic-ui-pw-tests'
-            }
-        }
-        stage('Fix Permissions') {
-            steps {
-                sh 'sudo chown -R jenkins:jenkins allure-results'
+                sh 'docker run --rm --user $(id -u jenkins):$(id -g jenkins) -v $(pwd)/allure-results:/app/allure-results magic-ui-pw-tests'
             }
         }
         stage('Allure Report') {
