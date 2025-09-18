@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/liamnoel007/magic_ui_pw.git', branch: 'main', credentialsId: 'github-ssh-key'
+                git url: 'git@github.com:liamnoel007/magic_ui_pw.git', branch: 'main', credentialsId: 'github-ssh-key'
             }
         }
         stage('Build Docker Image') {
