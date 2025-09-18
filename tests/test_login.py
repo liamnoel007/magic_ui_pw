@@ -1,7 +1,7 @@
 import allure
 
 
-def test_incorrect_login_and_password(self, login_page):
+def test_incorrect_login_and_password(login_page):
     with allure.step("Открыть страницу логина"):
         login_page.open_page()
 
