@@ -1,6 +1,7 @@
 import allure
 
 
+@allure.title("Тест формы ввода. Логин и пароль неверные")
 def test_incorrect_login_and_password(login_page):
     with allure.step("Открыть страницу логина"):
         login_page.open_page()
