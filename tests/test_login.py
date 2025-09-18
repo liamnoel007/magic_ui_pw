@@ -9,4 +9,4 @@ def test_incorrect_login_and_password(login_page):
         login_page.fill_login_form("123@123.com", "123123")
 
     with allure.step("Проверить сообщение об ошибке"):
-        login_page.check_error_text("Authentication failed")
+        login_page.check_error_text("Authentication failed.")
